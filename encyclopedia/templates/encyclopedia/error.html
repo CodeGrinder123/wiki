@@ -1,0 +1,23 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Error
+{% endblock %}
+
+{% block body %}
+    <br>
+    <div>
+        <h4 class="display-5">"{{input}}" is not found in the list.</h4>
+        <h4 class="display-5"> Only these entries are available. </h4>
+    </div>
+
+    <h1 class="display-4"> All Pages </h1>
+    <ul>
+        {% for entry in entries %}
+            <li>
+                <a href=/wiki/{{entry}}>{{ entry }}</a>
+            </li>    
+        {% endfor %}
+    </ul>
+
+{% endblock %}
